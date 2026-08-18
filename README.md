@@ -89,3 +89,6 @@ PDF/Excel reports, lightweight screening-history storage), and Stage 5's
 explanation generation now calls the Groq API instead of Ollama/templates —
 but every actual parsing/scoring/matching function is the same, unmodified
 Python it always was.
+=======
+# TalentLens
+
