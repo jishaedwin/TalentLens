@@ -80,15 +80,3 @@ a small bundled fictional job + 6 sample resumes (one deliberately has hidden
 content, to demonstrate the integrity check) — no upload needed, good first
 thing to try.
 
-## What's genuinely new vs. rebuilt, and what's untouched
-
-See `backend/README.md` and `frontend/README.md` for the full breakdown.
-Short version: the entire frontend was rebuilt from Streamlit to Next.js, a
-FastAPI layer was added around the backend (sessions, REST endpoints,
-PDF/Excel reports, lightweight screening-history storage), and Stage 5's
-explanation generation now calls the Groq API instead of Ollama/templates —
-but every actual parsing/scoring/matching function is the same, unmodified
-Python it always was.
-=======
-# TalentLens
-
