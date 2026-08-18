@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+python-multipart
+python-dotenv
+openpyxl
+reportlab
+groq
+pandas
+pymupdf
+pdfplumber
+pytesseract
+spacy
+sentence-transformers
+faiss-cpu
+gt-all-minilm-l6-v2
