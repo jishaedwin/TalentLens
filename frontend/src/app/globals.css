@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FAFAF9;
+  --surface: #FFFFFF;
+  --foreground: #171923;
+  --muted: #6B7280;
+  --muted-light: #9CA3AF;
+  --border: #E5E7EB;
+
+  /* TalentLens brand accent — used only for primary actions, active states, highlights */
+  --accent: #EA580C;
+  --accent-hover: #C2410C;
+  --accent-light: #FFF1E8;
+  --accent-border: #FED7AA;
+
+  /* Match-band palette, reused identically everywhere a band appears */
+  --band-strong: #15803D;
+  --band-strong-bg: #ECFDF3;
+  --band-high: #2563EB;
+  --band-high-bg: #EFF6FF;
+  --band-review: #B45309;
+  --band-review-bg: #FFFBEB;
+  --band-low: #DC2626;
+  --band-low-bg: #FEF2F2;
+
+  /* Integrity/fraud — deliberately distinct from both the orange accent and
+     the red "Low Fit" band, so a flag never reads as "just a bad score" */
+  --integrity-flag: #7C3AED;
+  --integrity-flag-bg: #F5F3FF;
+  --integrity-ok: #15803D;
+  --integrity-ok-bg: #ECFDF3;
+
+  --radius: 0.625rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-light: var(--muted-light);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-light: var(--accent-light);
+  --color-accent-border: var(--accent-border);
+  --color-band-strong: var(--band-strong);
+  --color-band-strong-bg: var(--band-strong-bg);
+  --color-band-high: var(--band-high);
+  --color-band-high-bg: var(--band-high-bg);
+  --color-band-review: var(--band-review);
+  --color-band-review-bg: var(--band-review-bg);
+  --color-band-low: var(--band-low);
+  --color-band-low-bg: var(--band-low-bg);
+  --color-integrity-flag: var(--integrity-flag);
+  --color-integrity-flag-bg: var(--integrity-flag-bg);
+  --color-integrity-ok: var(--integrity-ok);
+  --color-integrity-ok-bg: var(--integrity-ok-bg);
+  --font-sans: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "JetBrains Mono", Consolas, monospace;
+  --radius-lg: var(--radius);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+.font-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+

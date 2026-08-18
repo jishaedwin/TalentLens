@@ -1,0 +1,57 @@
+{
+  "folders": [
+    { "name": "backend (FastAPI)", "path": "backend" },
+    { "name": "frontend (Next.js)", "path": "frontend" }
+  ],
+  "settings": {
+    "python.defaultInterpreterPath": "${workspaceFolder:backend (FastAPI)}/.venv/bin/python",
+    "python.analysis.extraPaths": ["./backend"],
+    "editor.formatOnSave": true,
+    "[python]": { "editor.defaultFormatter": "ms-python.python" },
+    "[typescript][typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    "files.exclude": {
+      "**/__pycache__": true,
+      "**/node_modules": true,
+      "**/.next": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-python.python",
+      "ms-python.vscode-pylance",
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "bradlc.vscode-tailwindcss",
+      "humao.rest-client"
+    ]
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Backend: FastAPI (uvicorn)",
+        "type": "debugpy",
+        "request": "launch",
+        "module": "uvicorn",
+        "args": ["main:app", "--reload", "--port", "8000"],
+        "cwd": "${workspaceFolder:backend (FastAPI)}",
+        "envFile": "${workspaceFolder:backend (FastAPI)}/.env",
+        "console": "integratedTerminal",
+        "justMyCode": true
+      },
+      {
+        "name": "Frontend: Next.js dev server",
+        "type": "node-terminal",
+        "request": "launch",
+        "command": "npm run dev",
+        "cwd": "${workspaceFolder:frontend (Next.js)}"
+      }
+    ],
+    "compounds": [
+      {
+        "name": "Run Backend + Frontend together",
+        "configurations": ["Backend: FastAPI (uvicorn)", "Frontend: Next.js dev server"]
+      }
+    ]
+  }
+}
