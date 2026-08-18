@@ -50,17 +50,6 @@ sentence-transformer models into memory. Subsequent requests are fast.
   (5 sample resumes + the synthetic manipulated-content PDF used to validate
   the integrity checks), reused for the `/api/screenings/demo` endpoint.
 
-## Verified
-
-Tested end-to-end via real HTTP requests (not just import checks): screening
-creation → progress polling through all 6 real pipeline phases → candidate
-list → candidate detail with integrity evidence → what-if recompute → PDF
-report (visually inspected) → Excel report (structure verified) → dashboard
-history. Also verified through the actual Next.js frontend with Playwright.
-=======
-# TalentLens
-=======
-# TalentLens — VS Code Workspace
 
 Two projects, meant to run together:
 - **`backend/`** — FastAPI, wraps the existing TalentLens ML pipeline (resume
